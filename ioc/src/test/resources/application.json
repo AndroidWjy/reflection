@@ -1,0 +1,39 @@
+[
+  {
+    "name": "robot",
+    "className": "com.wjy.framework.ioc.entity.Robot"
+  },
+  {
+    "name": "hand",
+    "className": "com.wjy.framework.ioc.entity.Hand",
+    "constructorArgs": [
+      {
+        "index": 0,
+        "name": "left",
+        "ref": 1,
+        "type": "Integer"
+      },
+      {
+        "index": 1,
+        "name": "right",
+        "ref": 2,
+        "type": "Integer"
+      }
+    ]
+  },
+  {
+    "name": "mouth",
+    "className": "com.wjy.framework.ioc.entity.Mouth",
+    "constructorArgs": [
+      {
+        "index": 0,
+        "name": "apple",
+        "ref": "吃苹果",
+        "type":"String"
+      }
+    ]
+  }
+]
+
+
+
