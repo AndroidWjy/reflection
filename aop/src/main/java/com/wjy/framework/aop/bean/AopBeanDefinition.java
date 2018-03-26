@@ -31,4 +31,5 @@ public class AopBeanDefinition extends BeanDefinition{
     public void setInterceptorNames(List<String> interceptorNames) {
         this.interceptorNames = interceptorNames;
     }
+
 }

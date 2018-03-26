@@ -25,4 +25,19 @@ public class AdvisedSupport extends Advisor {
         list.addAll(interceptors);
     }
 
+    public TargetSource getTargetSource() {
+        return targetSource;
+    }
+
+    public void setTargetSource(TargetSource targetSource) {
+        this.targetSource = targetSource;
+    }
+
+    public List<AopMethodInterceptor> getList() {
+        return list;
+    }
+
+    public void setList(List<AopMethodInterceptor> list) {
+        this.list = list;
+    }
 }

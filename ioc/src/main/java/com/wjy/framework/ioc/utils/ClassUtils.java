@@ -5,7 +5,7 @@ package com.wjy.framework.ioc.utils;
  */
 public class ClassUtils {
 
-    private static ClassLoader getDefaultClassLoader(){
+    public static ClassLoader getDefaultClassLoader(){
         //拿到当前类加载器
         return Thread.currentThread().getContextClassLoader();
     }
