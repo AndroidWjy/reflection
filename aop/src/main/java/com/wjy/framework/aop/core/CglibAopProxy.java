@@ -36,6 +36,9 @@ public class CglibAopProxy implements AopProxy{
         }
         Enhancer enhancer = new Enhancer();
         enhancer.setSuperclass(rootClass.getSuperclass());
+
+
+
         //增加拦截器的核心方法
         Callback callbacks = getCallBack(advised);
         enhancer.setCallback(callbacks);
