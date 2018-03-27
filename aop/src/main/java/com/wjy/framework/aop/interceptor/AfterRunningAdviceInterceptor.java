@@ -4,7 +4,7 @@ import com.wjy.framework.aop.Invocation.MethodInvocation;
 import com.wjy.framework.aop.advisor.AfterRunningAdvice;
 
 /**
- * @author Zhengxin
+ * @author wjy
  */
 public class AfterRunningAdviceInterceptor implements AopMethodInterceptor {
 

@@ -32,7 +32,7 @@ public class CglibAopProxy implements AopProxy{
         Class<?> rootClass = advised.getTargetSource().getTagetClass();
 
         if(classLoader == null){
-            classLoader = ClassUtils.getDefultClassLoader();
+            classLoader = ClassUtils.getDefaultClassLoader();
         }
         Enhancer enhancer = new Enhancer();
         enhancer.setSuperclass(rootClass.getSuperclass());

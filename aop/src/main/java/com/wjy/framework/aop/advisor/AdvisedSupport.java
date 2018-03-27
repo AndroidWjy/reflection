@@ -2,6 +2,7 @@ package com.wjy.framework.aop.advisor;
 
 import com.wjy.framework.aop.interceptor.AopMethodInterceptor;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -11,6 +12,7 @@ import java.util.List;
  */
 
 @Data
+@EqualsAndHashCode(callSuper = false)
 public class AdvisedSupport extends Advisor {
 
     private TargetSource targetSource;
@@ -23,21 +25,5 @@ public class AdvisedSupport extends Advisor {
 
     public void addAopMethodInterceptors(List<AopMethodInterceptor> interceptors){
         list.addAll(interceptors);
-    }
-
-    public TargetSource getTargetSource() {
-        return targetSource;
-    }
-
-    public void setTargetSource(TargetSource targetSource) {
-        this.targetSource = targetSource;
-    }
-
-    public List<AopMethodInterceptor> getList() {
-        return list;
-    }
-
-    public void setList(List<AopMethodInterceptor> list) {
-        this.list = list;
     }
 }

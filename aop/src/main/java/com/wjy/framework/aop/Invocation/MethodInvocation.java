@@ -4,7 +4,7 @@ import java.lang.reflect.Method;
 
 /**
  * 用于描述方法的调用
- * @author Zhengxin
+ * @author wjy
  */
 
 public interface MethodInvocation {
