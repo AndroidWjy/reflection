@@ -2,6 +2,7 @@ package com.wjy.framework.ioc.test;
 
 import net.sf.cglib.proxy.CallbackFilter;
 
+import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 /**
@@ -11,15 +12,16 @@ import java.lang.reflect.Method;
 public class TargetMethodCallbackFilter implements CallbackFilter {
     @Override
     public int accept(Method method) {
-        if(method.getName().equals("getName")){
+        //System.out.println("方法名：" + method.getName());
+        if (method.getName().equals("getName")) {
             System.out.println("filter getName == 0");
             return 0;
         }
-        if(method.getName().equals("getAge")){
+        if (method.getName().equals("getAge")) {
             System.out.println("filter getAge == 1");
             return 1;
         }
-        if(method.getName().equals("setSex")){
+        if (method.getName().equals("setSex")) {
             System.out.println("filter setSex == 2");
             return 2;
         }

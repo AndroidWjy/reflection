@@ -11,7 +11,6 @@ import java.util.List;
  * IOC框架管理对象
  */
 @Data
-@ToString
 public class BeanDefinition {
 
     private String name;
@@ -31,44 +30,4 @@ public class BeanDefinition {
      * 需要注入的参数列表
      */
     private List<PropertyArg> propertyArgs;
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getClassName() {
-        return className;
-    }
-
-    public void setClassName(String className) {
-        this.className = className;
-    }
-
-    public String[] getInterfaceName() {
-        return interfaceName;
-    }
-
-    public void setInterfaceName(String[] interfaceName) {
-        this.interfaceName = interfaceName;
-    }
-
-    public List<ConstructorArg> getConstructorArgs() {
-        return constructorArgs;
-    }
-
-    public void setConstructorArgs(List<ConstructorArg> constructorArgs) {
-        this.constructorArgs = constructorArgs;
-    }
-
-    public List<PropertyArg> getPropertyArgs() {
-        return propertyArgs;
-    }
-
-    public void setPropertyArgs(List<PropertyArg> propertyArgs) {
-        this.propertyArgs = propertyArgs;
-    }
 }

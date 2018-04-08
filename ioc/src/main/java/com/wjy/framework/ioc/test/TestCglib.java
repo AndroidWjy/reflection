@@ -29,8 +29,8 @@ public class TestCglib {
 
         TargetObject targetObject = (TargetObject) enhancer.create();
 
-        System.out.println(targetObject.getAge());
-        System.out.println(targetObject.getName());
-        System.out.println(targetObject.setSex("男"));
+        //System.out.println(targetObject.getName()); //callbacks[0]
+        System.out.println(targetObject.getAge()); //callbacks[1]
+        //System.out.println(targetObject.setSex("男")); //callbacks[2]
     }
 }

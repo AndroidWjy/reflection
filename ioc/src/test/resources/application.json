@@ -1,7 +1,7 @@
 [
   {
-    "name": "robot",
-    "className": "com.wjy.framework.ioc.entity.Robot"
+  "name": "robot",
+  "className": "com.wjy.framework.ioc.entity.Robot"
   },
   {
     "name": "hand",
