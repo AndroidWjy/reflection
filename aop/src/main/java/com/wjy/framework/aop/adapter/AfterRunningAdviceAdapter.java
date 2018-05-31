@@ -5,6 +5,10 @@ import com.wjy.framework.aop.advisor.AfterRunningAdvice;
 import com.wjy.framework.aop.interceptor.AfterRunningAdviceInterceptor;
 import com.wjy.framework.aop.interceptor.AopMethodInterceptor;
 
+/**
+ * 后置适配器
+ * @author wjy
+ */
 public class AfterRunningAdviceAdapter implements AdviceAdapter{
 
     private AfterRunningAdviceAdapter(){
@@ -19,7 +23,9 @@ public class AfterRunningAdviceAdapter implements AdviceAdapter{
 
     @Override
     public AopMethodInterceptor getInterceptor(Advisor advisor) {
+        //将advisor适配成拦截器
         AfterRunningAdvice advice = (AfterRunningAdvice) advisor.getAdvice();
+        //实例化
         return new AfterRunningAdviceInterceptor(advice);
     }
 }

@@ -6,9 +6,14 @@ import com.wjy.framework.aop.utils.ReflectionUtils;
 import java.lang.reflect.Method;
 import java.util.List;
 
-public class ReflectioveMethodeInvocation implements ProxyMethodInvocation {
+/**
+ * 反射方法
+ *
+ * @author wjy
+ */
+public class ReflectiveMethodInvocation implements ProxyMethodInvocation {
 
-    public ReflectioveMethodeInvocation(Object proxy, Object target, Method method, Object[] arguments, List<AopMethodInterceptor> interceptorList) {
+    public ReflectiveMethodInvocation(Object proxy, Object target, Method method, Object[] arguments, List<AopMethodInterceptor> interceptorList) {
         this.proxy = proxy;
         this.target = target;
         this.method = method;
@@ -47,18 +52,19 @@ public class ReflectioveMethodeInvocation implements ProxyMethodInvocation {
     public Object proceed() throws Throwable {
 
         //执行完所有的拦截器后，执行目标方法
-        if(currentInterceptorIndex == this.interceptorList.size() - 1) {
+        if (currentInterceptorIndex == this.interceptorList.size() - 1) {
             return invokeOriginal();
         }
 
-        //迭代的执行拦截器。回顾上面的讲解，我们实现的拦击都会执行 im.proceed() 实际上就在调用这个方法。
+        //迭代的执行拦截器。回顾上面的讲解，我们实现的拦击都会执行 mi.proceed() 实际上就在调用这个方法。
         AopMethodInterceptor interceptor = interceptorList.get(++currentInterceptorIndex);
+        //递归执行，拦截器方法
         return interceptor.invoke(this);
 
     }
 
-    protected Object invokeOriginal() throws Throwable{
-        return ReflectionUtils.invokeMethodUseReflection(target,method,arguments);
+    protected Object invokeOriginal() throws Throwable {
+        return ReflectionUtils.invokeMethodUseReflection(target, method, arguments);
     }
 
 }

@@ -5,6 +5,9 @@ import com.wjy.framework.aop.advisor.BeforeMethodAdvice;
 import com.wjy.framework.aop.interceptor.AopMethodInterceptor;
 import com.wjy.framework.aop.interceptor.BeforeMethodAdviceInterceptor;
 
+/**
+ * @author wjy
+ */
 public class BeforeMethodAdviceAdapter implements AdviceAdapter{
 
     private BeforeMethodAdviceAdapter() {

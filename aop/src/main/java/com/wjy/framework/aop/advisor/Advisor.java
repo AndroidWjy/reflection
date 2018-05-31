@@ -3,26 +3,18 @@ package com.wjy.framework.aop.advisor;
 
 import lombok.Data;
 
+/**
+ * @author wjy
+ */
 @Data
 public class Advisor {
-
+    /**
+     * 干什么
+     */
     private Advice advice;
-
+    /**
+     * 在哪里
+     */
     private Pointcut pointcut;
 
-    public Advice getAdvice() {
-        return advice;
-    }
-
-    public void setAdvice(Advice advice) {
-        this.advice = advice;
-    }
-
-    public Pointcut getPointcut() {
-        return pointcut;
-    }
-
-    public void setPointcut(Pointcut pointcut) {
-        this.pointcut = pointcut;
-    }
 }

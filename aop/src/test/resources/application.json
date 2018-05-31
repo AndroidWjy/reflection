@@ -1,19 +1,19 @@
 [
   {
     "name":"beforeMethod",
-    "className":"com.xilidou.framework.aop.test.StartTimeBeforeMethod"
+    "className":"com.wjy.framework.aop.test.StartTimeBeforeMethod"
   },
   {
     "name":"afterMethod",
-    "className":"com.xilidou.framework.aop.test.EndTimeAfterMethod"
+    "className":"com.wjy.framework.aop.test.EndTimeAfterMethod"
   },
   {
     "name":"testService",
-    "className":"com.xilidou.framework.aop.test.TestService"
+    "className":"com.wjy.framework.aop.test.TestService"
   },
   {
     "name":"testServiceProxy",
-    "className":"com.xilidou.framework.aop.core.ProxyFactoryBean",
+    "className":"com.wjy.framework.aop.core.ProxyFactoryBean",
     "target":"testService",
     "interceptorNames":[
       "beforeMethod",

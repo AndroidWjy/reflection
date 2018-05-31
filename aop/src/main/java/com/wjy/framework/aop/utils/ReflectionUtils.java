@@ -3,6 +3,10 @@ package com.wjy.framework.aop.utils;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
+/**
+ * @author wjy
+ * 对方法的反射
+ */
 public class ReflectionUtils {
 
     public static Object invokeMethodUseReflection(Object target, Method method,Object[] args){

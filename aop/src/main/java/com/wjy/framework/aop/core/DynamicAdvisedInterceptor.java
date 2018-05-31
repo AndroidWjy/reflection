@@ -10,6 +10,10 @@ import net.sf.cglib.proxy.MethodProxy;
 import java.lang.reflect.Method;
 import java.util.List;
 
+/**
+ * 动态拦截，实现cglib的拦截器方法
+ * @author wjy
+ */
 public class DynamicAdvisedInterceptor implements MethodInterceptor{
 
     protected final List<AopMethodInterceptor> interceptorList;
@@ -20,9 +24,19 @@ public class DynamicAdvisedInterceptor implements MethodInterceptor{
         this.targetSource = targetSource;
     }
 
+    /**
+     * 回调时调用
+     * @param obj
+     * @param method
+     * @param args
+     * @param proxy
+     * @return
+     * @throws Throwable
+     */
     @Override
     public Object intercept(Object obj, Method method, Object[] args, MethodProxy proxy) throws Throwable {
-        MethodInvocation invocation = new CglibMethodInvocation(obj,targetSource.getTagetObject(),method, args,interceptorList,proxy);
+        //织入增强代码的方法，串联起本地拦截器
+        MethodInvocation invocation = new CglibMethodInvocation(obj,targetSource.getTargetObject(),method, args,interceptorList,proxy);
         return invocation.proceed();
     }
 }
