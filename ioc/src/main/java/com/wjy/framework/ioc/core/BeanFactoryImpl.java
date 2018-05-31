@@ -25,7 +25,9 @@ public class BeanFactoryImpl implements BeanFactory {
     private static final ConcurrentHashMap<String, BeanDefinition> beanDefineMap = new ConcurrentHashMap<>();
 
     private static final Set<String> beanNameSet = Collections.synchronizedSet(new HashSet<>());
-
+    /**
+     * 构造方法支持的基本类型
+     */
     private static final Map<String, Class> map = new HashMap<>();
 
     @Override
