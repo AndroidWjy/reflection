@@ -14,6 +14,7 @@
         <module>aop</module>
         <module>mergerequest</module>
         <module>aspect</module>
+        <module>jaas</module>
     </modules>
 
     <dependencyManagement>
